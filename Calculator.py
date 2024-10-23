@@ -17,15 +17,12 @@ def click(event):
         entry.insert(tk.END, event.widget.cget("text"))
 
 
-# Создание основного окна
 root = tk.Tk()
-root.title("Калькулятор")
+root.title("Calculator")
 
-# Создание строки для отображения ввода
 entry = tk.Entry(root, width=16, font=('Arial', 24), justify='right')
 entry.grid(row=0, column=0, columnspan=4)
 
-# Определение кнопок
 buttons = [
     '7', '8', '9', '/',
     '4', '5', '6', '*',
@@ -33,7 +30,6 @@ buttons = [
     'C', '0', '=', '+'
 ]
 
-# Добавление кнопок на интерфейс
 row_val = 1
 col_val = 0
 for button in buttons:
@@ -50,5 +46,4 @@ for button in buttons:
         col_val = 0
         row_val += 1
 
-# Запуск основного цикла
 root.mainloop()
